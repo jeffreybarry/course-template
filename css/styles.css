@@ -27,7 +27,7 @@ a {
 }
 a:hover,
 a:focus {
-  
+  color: white;
 }
 h1,
 h2,
@@ -42,28 +42,29 @@ p {
   line-height: 1.5;
   margin-bottom: 20px;
 }
-.bg-primary {
-  background-color: #5d151c;
-}
-.bg-dark {
-  background-color: #222222;
-  color: white;
-}
+
 .text-faded {
   color: rgba(255, 255, 255, 0.7);
 }
 
+.navbar {
+  background-color: #352c2f;
+}
 
+nav a {
+  
+  color: #adacb4;
+}
 
 header {
-  position: relative;
+  position: fixed;
   width: 100%;
   min-height: auto;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
   -o-background-size: cover;
-  background-position: center;
+  background-position: center top;
   background-image: url('../images/header.jpg'); 
   /*
 Header image by Hector Martinez @oria_hector via Unsplash
