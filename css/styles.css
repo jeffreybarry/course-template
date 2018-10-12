@@ -147,7 +147,10 @@ Inspired and adapted from https://escss.blogspot.com/2017/04/auto-hexagonal-css-
 .hexagon-body{
 	padding-right: calc(var(--size) * .5);
 	overflow-X: hidden;
-	hyphens: auto;
+  hyphens: auto;
+  margin-top: 100px;
+  padding-top: 100px;
+
 }
 .hexagon-body {
   margin: calc(var(--size) * .5) auto 0;
@@ -157,6 +160,7 @@ Inspired and adapted from https://escss.blogspot.com/2017/04/auto-hexagonal-css-
 	grid-gap: var(--gap);
 }
 .hexagon-article {
+  border: 1px solid black;
   width: var(--size); 
   height: calc(var(--size) / 1.1111111);
 	clip-path: url(#hexagono);
@@ -247,27 +251,6 @@ figure p {
   transition: .5s ease;
   background-color: #008CBA;
 } 
-
-.img-test {
-display: block;
-width: 100%;
-height: auto;
-transform: scale(1);
-transition: all 1s;
-} 
-.hexagon-test-container {
-position: relative;
-}  
-
-/* next two works on top test image */
-.hexagon-test-container:hover img {
-transform: scale(1.05);
- 
-} 
-
-.hexagon-test-container:hover .overlay {
-  opacity: 0.8;
-}
 
 
 .hexagon-text {
