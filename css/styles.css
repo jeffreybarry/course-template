@@ -124,6 +124,165 @@ header .header-content .header-content-inner p {
   margin-top: 2rem;
 } 
 
+/* hexagonal grid style 
+Inspired and adapted from https://escss.blogspot.com/2017/04/auto-hexagonal-css-grid-layout.html 
+*/
+
+*, *:after, *:before {box-sizing: inherit;}
+* {margin:0;padding:0;border: 0 none; position: relative;}
+:root {
+
+	--Nhexa: 4;
+	--gap: 2vw;
+	--size: calc(calc(100vw / var(--Nhexa)) - var(--gap));
+}
+@media only screen and (min-width: 1100px) {:root {--Nhexa: 6;}}
+@media only screen and (max-width: 600px) {
+	:root {--Nhexa: 2;}
+	.hexagon-body {margin-right: calc(var(--size) * .3);}
+}
+.hexagon-body {
+ box-sizing: border-box;
+}
+.hexagon-body{
+	padding-right: calc(var(--size) * .5);
+	overflow-X: hidden;
+	hyphens: auto;
+}
+.hexagon-body {
+  margin: calc(var(--size) * .5) auto 0;
+  width: calc(var(--size) * calc(var(--Nhexa) - 1));
+	display: grid;
+	grid-template-columns: repeat(var(--Nhexa), 1fr);
+	grid-gap: var(--gap);
+}
+.hexagon-article {
+  width: var(--size); 
+  height: calc(var(--size) / 1.1111111);
+	clip-path: url(#hexagono);
+  clip-path: polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%);
+  margin-right: calc(var(--size) / 2);
+	color: #fff;
+	overflow: hidden;
+}
+.hexagon-article:nth-child(2n) {margin: calc(var(--size) * -.5) calc(var(--size) * -.25) 0 calc(var(--size) * -.75);}
+.hexagon-article::before {
+	content: '';
+	float: left;
+	width: 25%;
+	height: 100%;
+	clip-path: polygon(0% 0%, 100% 0%, 0% 50%, 100% 100%, 0% 100%);
+	shape-outside: polygon(0% 0%, 100% 0%, 0% 50%, 100% 100%, 0% 100%);
+}
+.hexagon-img {
+  display: block;
+  width: var(--size);
+	height: var(--size);
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	transform-origin: 0% 50%;
+	transition: .75s;
+	clip-path: url(#hexagono);
+	clip-path: inherit;
+	z-index:  10;
+}
+
+h2 {font-size: 100%;}
+figure {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: center;
+	max-width: 50%;
+	height: 100%;
+	font-size: calc(9 / var(--Nhexa) * 1vw);
+	line-height: 1;
+	color: #fff;
+	transition: .75s .05s;
+  text-align: center;
+}
+figure p {
+	font-size: 70%;
+	line-height: 1.2;
+	width: 100%;
+}
+
+.hexagon-body > p {
+	
+	margin: 2rem 0 1rem calc(var(--size) * .5);
+
+}
+.hexagon-overlay {
+  position: absolute;
+    display:block;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    background: #3DC0F1;
+    background-size:50px 50px;
+    opacity:0;
+    filter:alpha(opacity=0.7);/*For IE6 - IE8*/
+    transition:all 0.6s;
+    z-index: 20;
+} 
+
+.hexagon-article:hover .hexagon-overlay {
+  opacity: 0.7;
+}
+
+.overlay {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #008CBA;
+} 
+
+.img-test {
+display: block;
+width: 100%;
+height: auto;
+transform: scale(1);
+transition: all 1s;
+} 
+.hexagon-test-container {
+position: relative;
+}  
+
+/* next two works on top test image */
+.hexagon-test-container:hover img {
+transform: scale(1.05);
+ 
+} 
+
+.hexagon-test-container:hover .overlay {
+  opacity: 0.8;
+}
+
+
+.hexagon-text {
+color: cadetblue;
+position: absolute;
+top: 50%;
+left: 50%;
+-webkit-transform: translate(-50%, -50%);
+-ms-transform: translate(-50%, -50%);
+transform: translate(-50%, -50%);
+text-align: center;
+font-size: 2rem;
+} 
+
+/* end hexagonal grid code */
 
 
 @media (min-width: 768px) {
