@@ -195,25 +195,6 @@ Inspired and adapted from https://escss.blogspot.com/2017/04/auto-hexagonal-css-
 	z-index:  10;
 }
 
-h2 {font-size: 100%;}
-figure {
-	display: flex;
-	flex-direction: column;
-	flex-wrap: nowrap;
-	justify-content: center;
-	max-width: 50%;
-	height: 100%;
-	font-size: calc(9 / var(--Nhexa) * 1vw);
-	line-height: 1;
-	color: #fff;
-	transition: .75s .05s;
-  text-align: center;
-}
-figure p {
-	font-size: 70%;
-	line-height: 1.2;
-	width: 100%;
-}
 
 .hexagon-body > p {
 
@@ -256,7 +237,6 @@ figure p {
 
 
 .hexagon-text {
-/*color: cadetblue;*/
 position: absolute;
 top: 50%;
 left: 50%;
@@ -264,8 +244,16 @@ left: 50%;
 -ms-transform: translate(-50%, -50%);
 transform: translate(-50%, -50%);
 text-align: center;
-font-size: 2rem;
+font-size: 1.5rem;
+hyphens: none;
 }
+
+.hexagon-text a {
+  text-decoration: none;
+  color: white;
+
+}
+
 
 /* end hexagonal grid code */
 
