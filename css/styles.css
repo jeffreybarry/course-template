@@ -10,7 +10,6 @@ body {
 }
 body {
   font-family: 'ff-meta-serif-web-pro',  serif;
-  /*background-color: #352c2f;*/
 }
 hr {
   border-color: #5d151c;
@@ -73,17 +72,11 @@ header  {
   position: fixed;
   width: 100%;
   min-height: auto;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  background-size: cover;
-  -o-background-size: cover;
-  background-position: center top;
-  background-image: url('');
-  /*
-Header image by Hector Martinez @oria_hector via Unsplash
-  */
+
+
   text-align: center;
   color: white;
+  z-index: 100;
 }
 header .header-content {
   position: relative;
@@ -258,6 +251,21 @@ hyphens: none;
 /* end hexagonal grid code */
 
 
+
+/* ---- particles.js container ---- */
+
+#particles-js{
+  width: 100%;
+  height: 100%;
+  background-color: #b61924;
+  background-image: url('');
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-color: #332a2d;
+
+}
+
 @media (min-width: 768px) {
   header {
     min-height: 100%;
@@ -299,7 +307,6 @@ hyphens: none;
   background-size: cover;
   -o-background-size: cover;
   background-position: center;
-  background-image: url('../images/header.jpg');
   }
   .navbar-brand {
     font-size: 1rem;
