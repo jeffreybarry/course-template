@@ -11,6 +11,7 @@ body {
 body {
   font-family: 'ff-meta-serif-web-pro',  serif;
   font-weight: 600;
+  color: #2b2b2b;
 }
 hr {
   border-color: #5d151c;
@@ -114,6 +115,7 @@ header .header-content .header-content-inner p {
   font-style: normal;
   font-weight: 500;
   margin-top: 2rem;
+  margin-bottom: 1.5rem;
 }
 
 /* hexagonal grid style
@@ -201,7 +203,7 @@ Inspired and adapted from https://escss.blogspot.com/2017/04/auto-hexagonal-css-
     bottom: 0;
     right: 0;
     margin: auto;
-    background: #3DC0F1;
+    background: #adacb4;
     background-size:50px 50px;
     opacity:0;
     filter:alpha(opacity=0.8);/*For IE6 - IE8*/
@@ -224,7 +226,6 @@ Inspired and adapted from https://escss.blogspot.com/2017/04/auto-hexagonal-css-
   width: 100%;
   opacity: 0;
   transition: .5s ease;
-  background-color: #008CBA;
 }
 
 
@@ -293,6 +294,145 @@ hyphens: none;
   }
 }
 
+
+/* --------- Creative block on ideas page --------- */
+
+.creative-block {
+  margin-top: 60px;
+  font-family: 'ff-meta-web-pro', 'Helvetica Neue', Arial, sans-serif;
+}
+.large-red-text {
+font-family: ff-meta-web-pro-condensed, sans-serif;
+font-size: 112px;
+font-weight: 450;
+color: #920715;
+}
+.large-italics {
+display: block;
+margin-top: -60px;
+padding-right: 40px;
+font-size: 62px;
+font-family: ff-meta-web-pro, sans-serif;
+font-weight: 200;
+font-style: italic;
+color: #adacb4;
+}
+.large-black {
+display: block;
+margin-top: -70px;
+font-size:62px;
+font-family: ff-meta-web-pro, sans-serif;
+font-weight: 200;
+color: black;
+text-transform: uppercase;
+}
+
+.large-red-text-bottom {
+display: block;
+margin-top: -75px;
+font-family: ff-meta-web-pro-condensed, sans-serif;
+font-size: 80px;
+font-weight: 500;
+color: #790914;
+text-transform: uppercase;
+}
+
+.single-line {
+  font-family: ff-meta-web-pro, sans-serif;
+  font-weight: 200;
+  color: #2b2b2b;
+  font-size: 30px;
+}
+
+
+/* ----- end creative block ---- */
+
+.article-spacer {
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
+
+
+/* ----- workflow shapes ---- */
+
+#hexagon-flow {
+    width: 80px;
+    height: 55px;
+    position: relative;
+    margin: 10px auto;
+}
+
+#hexagon-flow:before {
+    content: "";
+    width: 0;
+    height: 0;
+    position: absolute;
+    top: -25px;
+    left: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 25px solid #7471a3;
+}
+
+#hexagon-flow:after {
+    content: "";
+    width: 0;
+    height: 0;
+    position: absolute;
+    bottom: -25px;
+    left: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-top: 25px solid #7471a3;
+}
+
+
+
+#rectangle {
+    width: 220px;
+    height: 120px;
+    color: white;
+}
+
+
+
+.imagine {
+  background: #7471a3;
+  font-family: ff-meta-web-pro-condensed, sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+
+}
+.write {
+  background: #d1a849;
+  font-family: ff-meta-web-pro-condensed, sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+}
+.code {
+  background: #bca026;
+  font-family: ff-meta-web-pro-condensed, sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+}
+.control {
+  background: #7d682a;
+  font-family: ff-meta-web-pro-condensed, sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+}
+.decision {
+  background: #400303;
+  font-family: ff-meta-web-pro-condensed, sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+}
+.publish {
+background: #172c4d;
+font-family: ff-meta-web-pro-condensed, sans-serif;
+font-size: 18px;
+font-weight: 400;
+}
 
 
 @media only screen and (max-width: 736px) {
