@@ -52,7 +52,7 @@ p {
 }
 
 .sans-serif {
-  font-family: ff-meta-web-pro, sans-serif;
+  font-family: "ff-meta-web-pro", sans-serif;
   font-style: normal;
   font-weight: 500;
 }
@@ -117,6 +117,74 @@ header .header-content .header-content-inner p {
   margin-top: 2rem;
   margin-bottom: 1.5rem;
 }
+
+.week-heading  p {
+  color: #cc582c;
+  font-variant: small-caps;
+}
+.week-number {
+  font-size: 4rem;
+  color: #cc582c;
+}
+#monday-circle {
+   width: 100px;
+   height: 100px;
+   background: #4c4032;
+   border-radius: 50%;
+   line-height: 100px;
+   text-align: center;
+   color: white;
+   margin-bottom: 3rem;
+ }
+
+ #wednesday-circle {
+    width: 100px;
+    height: 100px;
+    background: #abc2c8;
+    border-radius: 50%;
+    line-height: 100px;
+    text-align: center;
+    color: white;
+  }
+
+  #friday-circle {
+     width: 100px;
+     height: 100px;
+     background: #8a2445;
+     border-radius: 50%;
+     line-height: 100px;
+     text-align: center;
+     color: white;
+     margin-top: 3rem;
+   }
+.exam-dates {
+  display: flex;
+  justify-content: space-between;
+}
+.date-icon-left {
+display: inline-block;
+}
+
+.date-icon-right {
+display: inline-block;
+
+}
+
+.schedule h3 {
+  margin-top: 8rem;
+  margin-bottom: 2rem;
+}
+
+
+
+
+
+
+
+
+
+
+
 
 /* hexagonal grid style
 Inspired and adapted from https://escss.blogspot.com/2017/04/auto-hexagonal-css-grid-layout.html
