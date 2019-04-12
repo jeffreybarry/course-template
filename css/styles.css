@@ -9,9 +9,9 @@ body {
   width: 100%;
 }
 body {
-  font-family: 'ff-meta-serif-web-pro',  serif;
+  font-family: ' ',  serif;
   font-weight: 600;
-  color: #2b2b2b;
+  color: black;
 }
 hr {
   border-color: #5d151c;
@@ -75,7 +75,7 @@ header  {
   width: 100%;
   min-height: auto;
   text-align: center;
-  color: white;
+  color: black;
   z-index: 100;
 }
 header .header-content {
@@ -94,7 +94,6 @@ header .header-content .header-content-inner hr {
 }
 header .header-content .header-content-inner p {
   font-weight: 300;
-  color: rgba(255, 255, 255, 0.8);
   font-size: 16px;
   margin-bottom: 50px;
 }
@@ -186,153 +185,9 @@ display: inline-block;
 
 
 
-/* hexagonal grid style
-Inspired and adapted from https://escss.blogspot.com/2017/04/auto-hexagonal-css-grid-layout.html
-*/
-
-*, *:after, *:before {box-sizing: inherit;}
-* {margin:0;padding:0;border: 0 none; position: relative;}
-:root {
-
-	--Nhexa: 4;
-	--gap: 2vw;
-	--size: calc(calc(100vw / var(--Nhexa)) - var(--gap));
-}
-@media only screen and (min-width: 1100px) {:root {--Nhexa: 6;}}
-@media only screen and (max-width: 600px) {
-	:root {--Nhexa: 2;}
-	.hexagon-body {margin-right: calc(var(--size) * .3);}
-}
-
-/* disabled show that all hexagons show without being clipped
-.hexagon-body {
- box-sizing: border-box;
-}
-*/
-.hexagon-body{
-	padding-right: calc(var(--size) * .5);
-	overflow-X: hidden;
-  hyphens: auto;
-  margin-top: 100px;
-  padding-top: 100px;
-
-}
-.hexagon-body {
-  margin: calc(var(--size) * .5) auto 0;
-  width: calc(var(--size) * calc(var(--Nhexa) - 1));
-	display: grid;
-	grid-template-columns: repeat(var(--Nhexa), 1fr);
-	grid-gap: var(--gap);
-}
-.hexagon-article {
-  width: var(--size);
-  height: calc(var(--size) / 1.1111111);
-	clip-path: url(#hexagono);
-  clip-path: polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%);
-  margin-right: calc(var(--size) / 2);
-	color: #fff;
-	overflow: hidden;
-}
-.hexagon-article:nth-child(2n) {margin: calc(var(--size) * -.5) calc(var(--size) * -.25) 0 calc(var(--size) * -.75);}
-.hexagon-article::before {
-	content: '';
-	float: left;
-	width: 25%;
-	height: 100%;
-	clip-path: polygon(0% 0%, 100% 0%, 0% 50%, 100% 100%, 0% 100%);
-	shape-outside: polygon(0% 0%, 100% 0%, 0% 50%, 100% 100%, 0% 100%);
-}
-.hexagon-img {
-  display: block;
-  width: var(--size);
-	height: var(--size);
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	transform-origin: 0% 50%;
-	transition: .75s;
-	clip-path: url(#hexagono);
-	clip-path: inherit;
-	z-index:  10;
-}
-
-
-.hexagon-body > p {
-
-	margin: 2rem 0 1rem calc(var(--size) * .5);
-
-}
-.hexagon-overlay {
-  position: absolute;
-    display:block;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    margin: auto;
-    background: #adacb4;
-    background-size:50px 50px;
-    opacity:0;
-    filter:alpha(opacity=0.8);/*For IE6 - IE8*/
-    transition:all 0.6s;
-    z-index: 20;
-}
-
-.hexagon-article:hover .hexagon-overlay {
-  opacity: 0.7;
-}
-
-.overlay {
-  position: absolute;
-  z-index: 1;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 100%;
-  width: 100%;
-  opacity: 0;
-  transition: .5s ease;
-}
-
-
-.hexagon-text {
-position: absolute;
-top: 50%;
-left: 50%;
--webkit-transform: translate(-50%, -50%);
--ms-transform: translate(-50%, -50%);
-transform: translate(-50%, -50%);
-text-align: center;
-font-size: 1.5rem;
-hyphens: none;
-}
-
-.hexagon-text a {
-  text-decoration: none;
-  color: white;
-
-}
-
-
-/* end hexagonal grid code */
 
 
 
-/* ---- particles.js container ---- */
-
-#particles-js{
-  width: 100%;
-  height: 100%;
-  background-color: #b61924;
-  background-image: url('');
-  background-size: cover;
-  background-position: 50% 50%;
-  background-repeat: no-repeat;
-  background-color: #332a2d;
-
-}
 
 @media (min-width: 768px) {
   header {
@@ -363,144 +218,12 @@ hyphens: none;
 }
 
 
-/* --------- Creative block on ideas page --------- */
-
-.creative-block {
-  margin-top: 60px;
-  font-family: 'ff-meta-web-pro', 'Helvetica Neue', Arial, sans-serif;
-}
-.large-red-text {
-font-family: ff-meta-web-pro-condensed, sans-serif;
-font-size: 112px;
-font-weight: 450;
-color: #920715;
-}
-.large-italics {
-display: block;
-margin-top: -60px;
-padding-right: 40px;
-font-size: 62px;
-font-family: ff-meta-web-pro, sans-serif;
-font-weight: 200;
-font-style: italic;
-color: #adacb4;
-}
-.large-black {
-display: block;
-margin-top: -70px;
-font-size:62px;
-font-family: ff-meta-web-pro, sans-serif;
-font-weight: 200;
-color: black;
-text-transform: uppercase;
-}
-
-.large-red-text-bottom {
-display: block;
-margin-top: -75px;
-font-family: ff-meta-web-pro-condensed, sans-serif;
-font-size: 80px;
-font-weight: 500;
-color: #790914;
-text-transform: uppercase;
-}
-
-.single-line {
-  font-family: ff-meta-web-pro, sans-serif;
-  font-weight: 200;
-  color: #2b2b2b;
-  font-size: 30px;
-}
-
-
-/* ----- end creative block ---- */
 
 .article-spacer {
   margin-top: 60px;
   margin-bottom: 60px;
 }
 
-
-/* ----- workflow shapes ---- */
-
-#hexagon-flow {
-    width: 80px;
-    height: 55px;
-    position: relative;
-    margin: 10px auto;
-}
-
-#hexagon-flow:before {
-    content: "";
-    width: 0;
-    height: 0;
-    position: absolute;
-    top: -25px;
-    left: 0;
-    border-left: 50px solid transparent;
-    border-right: 50px solid transparent;
-    border-bottom: 25px solid #7471a3;
-}
-
-#hexagon-flow:after {
-    content: "";
-    width: 0;
-    height: 0;
-    position: absolute;
-    bottom: -25px;
-    left: 0;
-    border-left: 50px solid transparent;
-    border-right: 50px solid transparent;
-    border-top: 25px solid #7471a3;
-}
-
-
-
-#rectangle {
-    width: 220px;
-    height: 120px;
-    color: white;
-}
-
-
-
-.imagine {
-  background: #7471a3;
-  font-family: ff-meta-web-pro-condensed, sans-serif;
-  font-size: 18px;
-  font-weight: 400;
-
-}
-.write {
-  background: #d1a849;
-  font-family: ff-meta-web-pro-condensed, sans-serif;
-  font-size: 18px;
-  font-weight: 400;
-}
-.code {
-  background: #bca026;
-  font-family: ff-meta-web-pro-condensed, sans-serif;
-  font-size: 18px;
-  font-weight: 400;
-}
-.control {
-  background: #7d682a;
-  font-family: ff-meta-web-pro-condensed, sans-serif;
-  font-size: 18px;
-  font-weight: 400;
-}
-.decision {
-  background: #400303;
-  font-family: ff-meta-web-pro-condensed, sans-serif;
-  font-size: 18px;
-  font-weight: 400;
-}
-.publish {
-background: #172c4d;
-font-family: ff-meta-web-pro-condensed, sans-serif;
-font-size: 18px;
-font-weight: 400;
-}
 
 
 @media only screen and (max-width: 736px) {
